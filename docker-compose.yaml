@@ -1,0 +1,29 @@
+version: '3'
+services:
+  backend:
+    container_name: framer_backend
+    build: .
+    restart: on-failure
+    ports:
+      - 3031:3031
+    depends_on:
+      - database
+    environment:
+      DB_NAME: '${DB_NAME}'
+      DB_HOST: framer_database
+      DB_USERNAME: '${DB_USERNAME}'
+      DB_PASSWORD: '${DB_PASSWORD}'
+  database:
+    container_name: framer_database
+    image: postgres:13-alpine
+    restart: always
+    hostname: postgres
+    environment:
+      POSTGRES_DB: '${DB_NAME}'
+      POSTGRES_USER: '${DB_USERNAME}'
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - ./db-data:/var/lib/postgresql/data
+      - ./db-logs:/var/log/postgresql
+    ports:
+      - '5432:5432'

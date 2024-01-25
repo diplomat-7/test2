@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SPLYD Notifications</title>
+    <style>
+      @font-face {
+        font-family: "Cairo";
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/cairo/v28/SLXgc1nY6HkvangtZmpQdkhzfH5lkSs2SgRjCAGMQ1z0hOA-a1biLD-H.woff2)
+          format("woff2");
+        unicode-range: U+0600-06FF, U+0750-077F, U+0870-088E, U+0890-0891,
+          U+0898-08E1, U+08E3-08FF, U+200C-200E, U+2010-2011, U+204F, U+2E41,
+          U+FB50-FDFF, U+FE70-FE74, U+FE76-FEFC;
+      }
+
+      @font-face {
+        font-family: tahoma;
+        font-style: normal;
+        font-weight: 400;
+        src: local("Tahoma"),
+          url(https://fonts.cdnfonts.com/s/57171/tahoma.woff) format("woff");
+      }
+
+      * {
+        font-size: 100%;
+        font-family: Arial;
+        font-family: "Cairo", Tahoma, Helvetica, Arial, "Times New Roman";
+      }
+
+      a.whatsapp {
+        text-decoration: none !important;
+        display: block;
+        width: fit-content !important;
+      }
+
+      .body-one {
+        padding: 30px 10px 0px 10px;
+        text-align: center;
+        background-image: url(https://s3.eu-west-3.amazonaws.com/splyd.com/email_temp/bg.png);
+        background-repeat: no-repeat;
+        background-position: 0px 10px;
+      }
+
+      .header-td {
+        color: white;
+        padding-top: 2rem;
+      }
+
+      .main-body-container {
+        height: 360px;
+        padding-bottom: 1rem;
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+
+      .h2-text {
+        font-size: 20px;
+        margin: 45px 0 40px 0px;
+      }
+
+      .p-body-welcome {
+        margin: 0;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+      .p-body-main {
+        padding-top: 15px;
+        font-weight: 600;
+        margin-bottom: 30px;
+        font-size: 14px;
+        line-height: 24px;
+      }
+
+      .cta-a-btn {
+        display: block;
+        background: #00ccbe;
+        border-radius: 8px;
+        max-width: 134px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 12px;
+        line-height: 22px;
+        padding: 7px 17px;
+        color: #ffffff !important;
+        text-decoration: none;
+        margin: 0 auto;
+        text-align: center;
+      }
+
+      .p-body-closure {
+        margin-top: 80px;
+        font-size: 14px;
+        line-height: 24px;
+        font-weight: 600;
+      }
+
+      .main-footer-container {
+        height: 140px;
+        padding: 0px 65px;
+      }
+
+      .footer-table-left-col {
+        text-align: left;
+        padding: 0px 17px;
+      }
+
+      .footer-table-right-col {
+        text-align: center;
+        padding: 0px 17px;
+      }
+
+      .email-contact {
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 19px;
+        /* or 19px */
+        margin: 0;
+        color: #1c3959;
+        color: #fff !important;
+      }
+
+      .social-icons {
+        margin-bottom: -2px;
+      }
+      .ico {
+        cursor: pointer;
+      }
+      .whatsapp-btn {
+        padding: 0px 17px;
+        width: 80px !important;
+        border: 1px solid #00cc4b;
+        border-radius: 6px;
+        margin: 0;
+      }
+      .whatsapp-btn-text {
+        font-weight: 600;
+        font-size: 10px;
+        line-height: 12px;
+        color: #00cc4b !important;
+        margin-left: 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body style="background: #f0f4f7; padding: 80px 0px">
+    <div id="email" style="width: 600px; margin: auto; background: white">
+      <table role="presentation" border="0" width="100%" cellspacing="0">
+        <tr>
+          {{#embed "backgroundImg"}} {{/embed}}
+        </tr>
+      </table>
+
+      <!-- Body 1 -->
+      <table role="presentation" border="0" width="100%" cellspacing="0">
+        <tr>
+          <td class="body-one">{{#block "templateBMain"}} {{/block}}</td>
+        </tr>
+      </table>
+
+      <!-- Footer -->
+      {{#embed "footer"}} {{/embed}}
+    </div>
+  </body>
+</html>

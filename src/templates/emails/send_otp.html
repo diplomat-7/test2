@@ -1,0 +1,12 @@
+{{#extend "templateB"}}{{#content "templateBMain"}}
+<div class="main-body-container">
+  <!-- Header -->
+  <h2 class="h2-text">Login Notification</h2>
+  <!-- Body Text 1 -->
+  <p class="p-body-welcome">
+    Please use this otp to login to your account, it expires in 2 minutes.
+  </p>
+  <br />
+  <p class="p-body-welcome"><strong>{{otp}}</strong></p>
+</div>
+{{/content}}{{/extend}}
